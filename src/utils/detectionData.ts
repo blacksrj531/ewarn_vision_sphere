@@ -149,7 +149,31 @@ export function getPresetDetections(
         tags: ['elephant', 'baby elephant', 'elephants', 'animal']
       }
     );
-  } else {
+    } else if (imageUrl.includes('photo-1511707171634-5f897ff02aa9') || imageUrl.includes('smartphone')) {
+    candidates.push(
+      {
+        label: 'Cell Phone',
+        conf: 0.982,
+        box: [0.245, 0.298, 0.210, 0.428],
+        tags: ['cell phone', 'phone', 'smartphone', 'electronic', 'electronics', 'gadget']
+      },
+      {
+        label: 'Laptop',
+        conf: 0.954,
+        box: [0.420, 0.315, 0.285, 0.620],
+        tags: ['laptop', 'keyboard', 'computer', 'electronic', 'electronics']
+      }
+    );
+  } else if (imageUrl.includes('photo-1518531933037-91b2f5f229cc') || imageUrl.includes('leaf') || imageUrl.includes('leaves')) {
+    candidates.push(
+      {
+        label: 'Potted Plant',
+        conf: 0.965,
+        box: [0.220, 0.260, 0.560, 0.680],
+        tags: ['plant', 'potted plant', 'leaf', 'flora', 'leaves']
+      }
+    );
+} else {
     // If not a bundled static sample, let the real in-browser neural model handle it!
     return null;
   }
