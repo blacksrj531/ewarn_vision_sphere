@@ -95,13 +95,14 @@ export const App: React.FC = () => {
           currentImage,
           userPrompt,
           confThreshold,
+          selectedModel,
           (_, status) => {
             if (!isCancelled) setLoadingStatus(status);
           }
         );
         if (!isCancelled) {
           setBoxes(realResults);
-          setLoadingStatus('Ready • 110ms');
+          setLoadingStatus(`Ready • ${selectedModel.speed}`);
         }
       } catch (err) {
         console.error('Detection error:', err);
