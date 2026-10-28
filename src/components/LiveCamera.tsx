@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { CameraOff, RefreshCw, AlertCircle, Video, Square, Download, Cpu } from 'lucide-react';
 import { getColorForLabel } from '../utils/colors';
-import { detectVideoFrame, type LiveDetectionResult } from '../utils/liveInference';
+import { detectVideoFrame, smoothBoundingBoxes, type LiveDetectionResult } from '../utils/liveInference';
 
 interface LiveCameraProps {
   isActive: boolean;
@@ -236,7 +236,7 @@ export const LiveCamera: React.FC<LiveCameraProps> = ({
 
             detectVideoFrame(video, confThreshold, activeClasses)
               .then((results) => {
-                cachedDetectionsRef.current = results;
+                cachedDetectionsRef.current = smoothBoundingBoxes(cachedDetectionsRef.current, results, 0.65);
                 if (!modelReady) setModelReady(true);
               })
               .catch((e) => console.warn('Inference error:', e))
