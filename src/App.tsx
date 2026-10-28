@@ -420,6 +420,10 @@ export const App: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2">
+            <span className={`text-xs font-medium ${theme.textSecondary}`}>
+              Guided by <span className={`font-semibold ${theme.textPrimary}`}>Prof. Santos Kumar Das</span>
+            </span>
+            <span className={theme.textSecondary}>•</span>
             <a
               href="https://blacksrj531.github.io/my_portfolio_531/"
               target="_blank"
