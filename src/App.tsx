@@ -420,7 +420,15 @@ export const App: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className={`font-mono text-xs font-bold ${theme.textPrimary}`}>made by BLACKSRJ531</span>
+            <a
+              href="https://blacksrj531.github.io/my_portfolio_531/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`font-mono text-xs font-bold ${theme.textPrimary} hover:text-indigo-400 transition-colors duration-150 underline decoration-indigo-500/40 hover:decoration-indigo-400 underline-offset-4 cursor-pointer`}
+              title="Visit BLACKSRJ531 Portfolio"
+            >
+              made by BLACKSRJ531
+            </a>
           </div>
         </div>
       </footer>
