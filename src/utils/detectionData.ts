@@ -110,30 +110,42 @@ export function getPresetDetections(
       }
     );
   } else if (isSavannahHerdSample) {
-    // Exact realistic ground truth for the savannah elephants image you uploaded
+    // Exact ground truth for all 6 individual elephants in the family herd
     candidates.push(
       {
         label: 'Elephant',
         conf: 0.985,
-        box: [0.245, 0.510, 0.220, 0.440], // Adult elephant on left
+        box: [0.318, 0.422, 0.174, 0.446],
         tags: ['elephant', 'elephants', 'animal']
       },
       {
         label: 'Elephant',
-        conf: 0.992,
-        box: [0.340, 0.480, 0.380, 0.485], // Large adult elephant in center
+        conf: 0.962,
+        box: [0.208, 0.490, 0.114, 0.366],
         tags: ['elephant', 'elephants', 'animal']
       },
       {
         label: 'Elephant',
-        conf: 0.954,
-        box: [0.220, 0.700, 0.110, 0.260], // Small baby calf
+        conf: 0.925,
+        box: [0.132, 0.450, 0.106, 0.380],
+        tags: ['elephant', 'elephants', 'animal']
+      },
+      {
+        label: 'Elephant',
+        conf: 0.948,
+        box: [0.244, 0.628, 0.076, 0.240],
         tags: ['elephant', 'baby elephant', 'elephants', 'animal']
       },
       {
         label: 'Elephant',
-        conf: 0.941,
-        box: [0.345, 0.740, 0.095, 0.220], // Second calf near center
+        conf: 0.912,
+        box: [0.180, 0.665, 0.052, 0.200],
+        tags: ['elephant', 'baby elephant', 'elephants', 'animal']
+      },
+      {
+        label: 'Elephant',
+        conf: 0.886,
+        box: [0.309, 0.704, 0.055, 0.165],
         tags: ['elephant', 'baby elephant', 'elephants', 'animal']
       }
     );
