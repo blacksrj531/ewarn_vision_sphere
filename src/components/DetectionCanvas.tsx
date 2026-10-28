@@ -64,7 +64,7 @@ export const DetectionCanvas: React.FC<DetectionCanvasProps> = ({
   const drawCanvas = () => {
     const canvas = canvasRef.current;
     const img = imgRef.current;
-    if (!canvas || !img || !img.complete) return;
+    if (!canvas || !img || !img.complete || img.naturalWidth === 0) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;

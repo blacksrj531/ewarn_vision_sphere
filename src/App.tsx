@@ -152,7 +152,7 @@ export const App: React.FC = () => {
       <header className={`border-b ${theme.navBg} sticky top-0 z-50 px-4 sm:px-6 py-2.5 flex items-center justify-between`}>
         <div className="flex items-center gap-3">
           <div className="h-8 px-2 py-0.5 bg-white rounded-md border border-slate-200 shadow-xs flex items-center justify-center shrink-0">
-            <img src="/ewarn-logo.png" alt="eWARN Logo" className="h-6 w-auto object-contain" />
+            <img src="./ewarn-logo.png" alt="eWARN Logo" className="h-6 w-auto object-contain" />
           </div>
 
           <div className="hidden sm:flex items-center gap-2">

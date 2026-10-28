@@ -38,8 +38,8 @@ export const SAMPLE_IMAGES: SampleImage[] = [
   {
     id: 'elephants-highway',
     title: 'Elephant & Truck Road Encounter',
-    url: '/samples/elephants.png',
-    thumbnail: '/samples/elephants.png',
+    url: './samples/elephants.png',
+    thumbnail: './samples/elephants.png',
     defaultPrompt: 'elephant, truck, person'
   },
   {
